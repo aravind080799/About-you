@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lovely Quotes About Her</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #f8cdda, #1d2b64);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+    .quote-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+    .quote-card:hover {
+      transform: scale(1.05);
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+    }
+    .quote {
+      margin-top: 20px;
+      font-size: 18px;
+      font-style: italic;
+    }
+    .author {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #fce4ec;
+    }
+    button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #e91e63;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quote-card">
+    <img src="./WhatsApp Image 2025-06-19 at 10.37.44 AM.jpeg" alt="Her Image">
+    <div class="quote" id="quote">"Her smile makes the stars look dull."</div>
+    <div class="author" id="author">- Unknown</div>
+    <button onclick="newQuote()">About You</button>
+  </div>
+
+  <script>
+    const quotes = [
+      { quote: "Her smile makes the stars look dull.", author: "Unknown" },
+      { quote: "She is poetry in motion, grace in every step.", author: "Unknown" },
+      { quote: "Her laughter is the music that fills my empty heart.", author: "Someone Special" },
+      { quote: "She’s not just beautiful; she’s the reason beauty exists.", author: "Anonymous" },
+      { quote: "In her eyes, the world seems brighter and kinder.", author: "Unknown" }
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').textContent = `"${quotes[randomIndex].quote}"`;
+      document.getElementById('author').textContent = `- ${quotes[randomIndex].author}`;
+    }
+  </script>
+
+</body>
+</html>
